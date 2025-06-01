@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cosmetic.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsomchan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tsomchan <tsomchan@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 14:57:55 by tsomchan          #+#    #+#             */
-/*   Updated: 2023/08/31 14:57:57 by tsomchan         ###   ########.fr       */
+/*   Updated: 2025/06/01 10:43:09 by tsomchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	banner_border(int len)
 {
 	int	i;
 
-	ft_color("blue");
+	ft_color("BLU");
 	printf("o");
 	i = len + 2;
 	while (--i >= 0)
@@ -38,14 +38,14 @@ void	banner(char *str, char *desc)
 	else
 		len = strlen(str) + strlen(desc) + 3;
 	banner_border(len);
-	printcolor("|", "blue");
-	ft_color("white");
+	printcolor("|", "BLU");
+	ft_color("WHT");
 	printf(" %s ", str);
-	printcolor("| ", "blue");
+	printcolor("| ", "BLU");
 	if (*desc != 0)
 	{
-		printcolor(desc, "black");
-		printcolor(" |", "blue");
+		printcolor(desc, "BLK");
+		printcolor(" |", "BLU");
 	}
 	printf("\n");
 	banner_border(len);
@@ -58,14 +58,14 @@ void	divider_start(void)
 
 void	divider_end(void)
 {
-	ft_color("blue");
+	ft_color("BLU");
 	printf("o-------------------------------------- --- -- -\n");
 	ft_color("reset");
 }
 
 void	program_header(void)
 {
-	ft_color("purple");
+	ft_color("PUR");
 	printf("o-------------------------------------- --- -- -\n");
 	printf("o------------------------------- -- --- -\n");
 	printf("o------------------------ --- -- -\n");

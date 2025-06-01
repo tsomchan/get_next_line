@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsomchan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tsomchan <tsomchan@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:41:26 by tsomchan          #+#    #+#             */
-/*   Updated: 2023/09/19 15:41:27 by tsomchan         ###   ########.fr       */
+/*   Updated: 2025/06/01 10:43:09 by tsomchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,21 +41,21 @@ void	print_chars(char *str)
 void	print_line(char *str)
 {
 	// printf("[%d] next line is --> \"", g_count++);
-	printcolor("[", "blue");
-	ft_color("white");
+	printcolor("[", "BLU");
+	ft_color("WHT");
 	printf("%d", g_count++);
 	ft_color("reset");	
-	printcolor("] ", "blue");
+	printcolor("] ", "BLU");
 	if (g_count <= 10)
 		printf(" ");
-	printcolor("next line is --> \"", "black");
-	ft_color("white");
+	printcolor("next line is --> \"", "BLK");
+	ft_color("WHT");
 	print_chars(str);
 	ft_color("reset");
 	// if (!check_newline(str))
-	// 	printcolor("\" (no '\\n')\n", "black");
+	// 	printcolor("\" (no '\\n')\n", "BLK");
 	// else
-	printcolor("\"\n", "black");
+	printcolor("\"\n", "BLK");
 }
 
 void	test_gnl(char *test)
@@ -64,8 +64,8 @@ void	test_gnl(char *test)
 	char		*ptr;
 
 	g_count = 1;
-	printcolor("/////////////////////////////////////////\n", "blue");
-	ft_color("black");
+	printcolor("/////////////////////////////////////////\n", "BLU");
+	ft_color("BLK");
 	printf("test file\t= %s\n", test);
 	ft_color("reset");
 	fd = open(test, O_RDONLY);
@@ -77,7 +77,7 @@ void	test_gnl(char *test)
 		ptr = get_next_line(fd);
 	}
 	free(ptr);
-	printcolor("-----------------------------------------\n", "purple");
+	printcolor("-----------------------------------------\n", "PUR");
 }
 
 void	test_gnl_n(char *test, int n)
@@ -86,8 +86,8 @@ void	test_gnl_n(char *test, int n)
 	char		*ptr;
 
 	g_count = 1;
-	printcolor("/////////////////////////////////////////\n", "blue");
-	ft_color("black");
+	printcolor("/////////////////////////////////////////\n", "BLU");
+	ft_color("BLK");
 	printf("test file\t= %s\n", test);
 	ft_color("reset");
 	fd = open(test, O_RDONLY);
@@ -100,15 +100,15 @@ void	test_gnl_n(char *test, int n)
 	}
 	if (!ptr)
 	{
-		printcolor("[", "blue");
-		ft_color("white");	
+		printcolor("[", "BLU");
+		ft_color("WHT");	
 		printf("%d", g_count++);
 		ft_color("reset");	
-		printcolor("] ", "blue");
-		printcolor("no more next line\n", "black");
+		printcolor("] ", "BLU");
+		printcolor("no more next line\n", "BLK");
 	}
 	free(ptr);
-	printcolor("-----------------------------------------\n", "purple");
+	printcolor("-----------------------------------------\n", "PUR");
 }
 
 int	main(void)

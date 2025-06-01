@@ -43,7 +43,7 @@ $(OBJ_PTH)%.o: %.c $(INC) $(INC_B) | $(OBJ_PTH)
 
 $(OBJ_PTH):
 	mkdir -p $(OBJ_PTH)
-	@echo "$(D_GREEN)compiled $@$(NC)"
+	@echo "$(D_GRN)compiled $@$(NC)"
 
 clean:
 	$(RM) $(addprefix $(OBJ_PTH), $(OBJ)) #$(OBJ_B)
@@ -95,22 +95,22 @@ git: git_add push
 
 #	Colors
 NC			=	\033[0;0m
-BLACK		=	\033[0;30m
+BLK		=	\033[0;30m
 D_RED		=	\033[0;31m
-D_GREEN		=	\033[0;32m
-D_YELLOW	=	\033[0;33m
-D_BLUE		=	\033[0;34m
-D_PURPLE	=	\033[0;35m
-D_CYAN		=	\033[0;36m
+D_GRN		=	\033[0;32m
+D_YLW	=	\033[0;33m
+D_BLU		=	\033[0;34m
+D_PUR	=	\033[0;35m
+D_CYN		=	\033[0;36m
 L_GRAY		=	\033[0;37m
 D_GRAY		=	\033[1;30m
 L_RED		=	\033[1;31m
-L_GREEN		=	\033[1;32m
-L_YELLOW	=	\033[1;33m
-L_BLUE		=	\033[1;34m
-L_PURPLE	=	\033[1;35m
-L_CYAN		=	\033[1;36m
-WHITE		=	\033[1;37m
+L_GRN		=	\033[1;32m
+L_YLW	=	\033[1;33m
+L_BLU		=	\033[1;34m
+L_PUR	=	\033[1;35m
+L_CYN		=	\033[1;36m
+WHT		=	\033[1;37m
 
 #	testers
 #USER_PTH	=	/Users/tsomchan/

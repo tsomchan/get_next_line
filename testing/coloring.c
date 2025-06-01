@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   coloring.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsomchan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tsomchan <tsomchan@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 14:38:49 by tsomchan          #+#    #+#             */
-/*   Updated: 2023/08/31 14:40:10 by tsomchan         ###   ########.fr       */
+/*   Updated: 2025/06/01 10:43:09 by tsomchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,21 @@ void	ft_color(char *colorstr)
 	char	*color;
 
 	color = strdup(colorstr);
-	if (strcmp(color, "black") == 0)
+	if (strcmp(color, "BLK") == 0)
 		set = "[1;30m";
 	else if (strcmp(color, "red") == 0)
 		set = "[1;31m";
-	else if (strcmp(color, "green") == 0)
+	else if (strcmp(color, "GRN") == 0)
 		set = "[1;32m";
-	else if (strcmp(color, "yellow") == 0)
+	else if (strcmp(color, "YLW") == 0)
 		set = "[1;33m";
-	else if (strcmp(color, "blue") == 0)
+	else if (strcmp(color, "BLU") == 0)
 		set = "[1;34m";
-	else if (strcmp(color, "purple") == 0)
+	else if (strcmp(color, "PUR") == 0)
 		set = "[1;35m";
-	else if (strcmp(color, "cyan") == 0)
+	else if (strcmp(color, "CYN") == 0)
 		set = "[1;36m";
-	else if (strcmp(color, "white") == 0)
+	else if (strcmp(color, "WHT") == 0)
 		set = "[1;37m";
 	else if (strcmp(color, "reset") == 0)
 		set = "[0m";
